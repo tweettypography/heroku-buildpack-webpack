@@ -1,10 +1,8 @@
-# Heroku Buildpack for webpack
+# Heroku Buildpack for additional build steps
 
-This is a [Heroku buildpack](http://devcenter.heroku.com/articles/buildpacks) for web applications that use webpack.
+This is a [Heroku buildpack](http://devcenter.heroku.com/articles/buildpacks) for web applications that have additional build steps specified in package.json.
 
 ## Usage
-
-The `bin/compile` script run webpack with a specially named configuration file (`webpack.heroku.config.js` in your main directory). To use the buildpack:
 
 1. Configure as your second buildpack:
 
