@@ -11,4 +11,7 @@ export_env_dir $env_dir
 cd $build_dir
 
 head "Building webpack bundle"
-$(npm bin)/webpack --profile --display-modules
+$(npm bin)/webpack --config webpack.heroku.config.js --optimize-minimize
+
+head "Building docs"
+npm run-script docs
