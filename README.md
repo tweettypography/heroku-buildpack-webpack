@@ -6,17 +6,10 @@ This is a [Heroku buildpack](http://devcenter.heroku.com/articles/buildpacks) fo
 
 The `bin/compile` script run webpack with a specially named configuration file (`webpack.heroku.config.js` in your main directory). To use the buildpack:
 
-1. Use the [multi buildpack](https://github.com/ddollar/heroku-buildpack-multi):
+1. Configure as your second buildpack:
 
    ```bash
-   $ heroku config:set BUILDPACK_URL=https://github.com/ddollar/heroku-buildpack-multi
+   $ heroku buildpacks:add --index 2 https://github.com/tweettypography/heroku-buildpack-webpack
    ```
 
-2. Configure your `.buildpacks` file:
-
-   ```
-   https://github.com/heroku/heroku-buildpack-nodejs
-   https://github.com/tweettypography/heroku-buildpack-webpack
-   ```
-
-3. Deploy to Heroku.
+2. Deploy to Heroku.
