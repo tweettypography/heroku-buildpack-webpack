@@ -4,7 +4,7 @@ This is a [Heroku buildpack](http://devcenter.heroku.com/articles/buildpacks) fo
 
 ## Usage
 
-The `bin/compile` script run webpack with the default configuration file (`webpack.config.js` in your main directory). To use the buildpack:
+The `bin/compile` script run webpack with a specially named configuration file (`webpack.heroku.config.js` in your main directory). To use the buildpack:
 
 1. Use the [multi buildpack](https://github.com/ddollar/heroku-buildpack-multi):
 
@@ -16,7 +16,7 @@ The `bin/compile` script run webpack with the default configuration file (`webpa
 
    ```
    https://github.com/heroku/heroku-buildpack-nodejs
-   https://github.com/jerrysu/heroku-buildpack-webpack
+   https://github.com/tweettypography/heroku-buildpack-webpack
    ```
 
 3. Deploy to Heroku.
