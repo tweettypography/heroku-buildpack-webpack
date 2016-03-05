@@ -10,5 +10,5 @@ source $bp_dir/lib/common.sh
 export_env_dir $env_dir
 cd $build_dir
 
-head "Run the heroku-build command"
-npm run-script heroku-build
+head "Run the heroku build command"
+npm run-script postinstall
