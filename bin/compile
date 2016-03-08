@@ -5,12 +5,6 @@ build_dir=$1
 cache_dir=$2
 env_dir=$3
 
-GITHUB_USER=$(<$env_dir/GITHUB_USER)
-GITHUB_USER_ACCESS_TOKEN=$(<$env_dir/GITHUB_USER_ACCESS_TOKEN)
-
-# Swap "git+ssh://git" URLs for "https://$GITHUB_USER:$GITHUB_USER_ACCESS_TOKEN"
-echo `sed 's/git+ssh\:\/\/git\@github\.com\:/https\:\/\/'"$GITHUB_USER"'\:'"$GITHUB_USER_ACCESS_TOKEN"'\@github\.com\//g' $build_dir/package.json` > $build_dir/package.json
-
 source $bp_dir/lib/common.sh
 
 export_env_dir $env_dir
